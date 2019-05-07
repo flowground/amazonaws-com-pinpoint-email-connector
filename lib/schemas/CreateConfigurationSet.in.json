@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A request to create a configuration set.",
+            "properties": {
+                "ConfigurationSetName": {
+                    "description": "The name of the configuration set.",
+                    "type": "string"
+                },
+                "DeliveryOptions": {
+                    "description": "An object that defines the dedicated IP pool that is used to send emails that you send using the configuration set.",
+                    "properties": {
+                        "SendingPoolName": {
+                            "description": "The name of the dedicated IP pool that you want to associate with the configuration set.",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "ReputationOptions": {
+                    "description": "An object that defines whether or not Amazon Pinpoint collects reputation metrics for the emails that you send that use the configuration set.",
+                    "properties": {
+                        "LastFreshStart": {
+                            "description": "The date and time (in Unix time) when the reputation metrics were last given a fresh start. When your account is given a fresh start, your reputation metrics are calculated starting from the date of the fresh start.",
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        "ReputationMetricsEnabled": {
+                            "description": "If <code>true</code>, tracking of reputation metrics is enabled for the configuration set. If <code>false</code>, tracking of reputation metrics is disabled for the configuration set.",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "SendingOptions": {
+                    "description": "An object that defines whether or not Amazon Pinpoint can send email that you send using the configuration set.",
+                    "properties": {
+                        "SendingEnabled": {
+                            "description": "If <code>true</code>, email sending is enabled for the configuration set. If <code>false</code>, email sending is disabled for the configuration set.",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "TrackingOptions": {
+                    "description": "An object that defines the open and click tracking options for emails that you send using the configuration set.",
+                    "properties": {
+                        "CustomRedirectDomain": {
+                            "description": "The domain that you want to use for tracking open and click events.",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "CustomRedirectDomain"
+                    ],
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "Domain": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A request to obtain deliverability metrics for a domain.",
+            "properties": {
+                "EndDate": {
+                    "description": "The last day (in Unix time) that you want to obtain domain deliverability metrics for. The <code>EndDate</code> that you specify has to be less than or equal to 30 days after the <code>StartDate</code>.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "StartDate": {
+                    "description": "The first day (in Unix time) that you want to obtain domain deliverability metrics for.",
+                    "format": "date-time",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "StartDate",
+                "EndDate"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

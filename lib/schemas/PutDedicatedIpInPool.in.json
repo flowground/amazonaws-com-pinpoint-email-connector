@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "IP": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A request to move a dedicated IP address to a dedicated IP pool.",
+            "properties": {
+                "DestinationPoolName": {
+                    "description": "The name of the IP pool that you want to add the dedicated IP address to. You have to specify an IP pool that already exists.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "DestinationPoolName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
