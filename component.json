@@ -1,6 +1,6 @@
 {
     "title": "Amazon Pinpoint Email Service",
-    "description": "<fullname>Amazon Pinpoint Email Service</fullname> <p> This document contains reference information for the <a href=\"https://aws.amazon.com/pinpoint\">Amazon Pinpoint</a> Email API, version 1.0. This document is best used in conjunction with the <a href=\"http://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html\">Amazon Pinpoint Developer Guide</a>.</p> <p>The Amazon Pinpoint Email API is available in the US East (N. Virginia), US West (Oregon) and the EU (Ireland) Regions at the following endpoints:</p> <ul> <li> <p> <b>US East (N. Virginia)</b>: <code>email.us-east-1.amazonaws.com</code> </p> </li> <li> <p> <b>US West (Oregon)</b>: <code>email.us-west-2.amazonaws.com</code> </p> </li> <li> <p> <b>EU (Ireland)</b>: <code>email.eu-west-1.amazonaws.com</code> </p> </li> </ul>",
+    "description": "Amazon Pinpoint Email Service  This document contains reference information for\nthe Amazon Pinpoint [https://aws.amazon.com/pinpoint] Email API, version 1.0.\nThis document is best used in conjunction with the Amazon Pinpoint Developer\nGuide [http://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html].\n\nThe Amazon Pinpoint Email API is available in the US East (N. Virginia), US West\n(Oregon) and the EU (Ireland) Regions at the following endpoints:\n\n *   US East (N. Virginia): email.us-east-1.amazonaws.com \n   \n   \n *   US West (Oregon): email.us-west-2.amazonaws.com \n   \n   \n *   EU (Ireland): email.eu-west-1.amazonaws.com",
     "docsUrl": "https://docs.aws.amazon.com/email/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/pinpoint-email/2018-07-26/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,7 +38,7 @@
     "actions": {
         "GetAccount": {
             "main": "./lib/actions/GetAccount.js",
-            "title": "Obtain information about the email-sending status and capabilities of your Amazon Pinpoint account in the current AWS Region.",
+            "title": "GetAccount",
             "description": "Obtain information about the email-sending status and capabilities of your Amazon Pinpoint account in the current AWS Region.",
             "fields": {
                 "verbose": {
@@ -55,7 +55,7 @@
         },
         "PutAccountDedicatedIpWarmupAttributes": {
             "main": "./lib/actions/PutAccountDedicatedIpWarmupAttributes.js",
-            "title": "Enable or disable the automatic warm-up feature for dedicated IP addresses.",
+            "title": "PutAccountDedicatedIpWarmupAttributes",
             "description": "Enable or disable the automatic warm-up feature for dedicated IP addresses.",
             "fields": {
                 "verbose": {
@@ -72,7 +72,7 @@
         },
         "PutAccountSendingAttributes": {
             "main": "./lib/actions/PutAccountSendingAttributes.js",
-            "title": "Enable or disable the ability of your account to send email.",
+            "title": "PutAccountSendingAttributes",
             "description": "Enable or disable the ability of your account to send email.",
             "fields": {
                 "verbose": {
@@ -89,8 +89,8 @@
         },
         "ListConfigurationSets": {
             "main": "./lib/actions/ListConfigurationSets.js",
-            "title": "<p>List all of the configuration sets associated with your Amazon Pinpoint account in the current region.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
-            "description": "<p>List all of the configuration sets associated with your Amazon Pinpoint account in the current region.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
+            "title": "ListConfigurationSets",
+            "description": "List all of the configuration sets associated with your Amazon Pinpoint account\nin the current region.\n\nIn Amazon Pinpoint, configuration sets are groups of rules that you can apply to\nthe emails you send. You apply a configuration set to an email by including a\nreference to the configuration set in the headers of the email. When you apply a\nconfiguration set to an email, all of the rules in that configuration set are\napplied to the email.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -106,7 +106,7 @@
         },
         "CreateConfigurationSet": {
             "main": "./lib/actions/CreateConfigurationSet.js",
-            "title": "Create a configuration set. <i>Configuration sets</i> are groups of rules that you can apply to the emails you send using Amazon Pinpoint. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email. ",
+            "title": "CreateConfigurationSet",
             "description": "Create a configuration set. <i>Configuration sets</i> are groups of rules that you can apply to the emails you send using Amazon Pinpoint. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email. ",
             "fields": {
                 "verbose": {
@@ -123,8 +123,8 @@
         },
         "DeleteConfigurationSet": {
             "main": "./lib/actions/DeleteConfigurationSet.js",
-            "title": "<p>Delete an existing configuration set.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
-            "description": "<p>Delete an existing configuration set.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
+            "title": "DeleteConfigurationSet",
+            "description": "Delete an existing configuration set.\n\nIn Amazon Pinpoint, configuration sets are groups of rules that you can apply to\nthe emails you send. You apply a configuration set to an email by including a\nreference to the configuration set in the headers of the email. When you apply a\nconfiguration set to an email, all of the rules in that configuration set are\napplied to the email.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -140,8 +140,8 @@
         },
         "GetConfigurationSet": {
             "main": "./lib/actions/GetConfigurationSet.js",
-            "title": "<p>Get information about an existing configuration set, including the dedicated IP pool that it's associated with, whether or not it's enabled for sending email, and more.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
-            "description": "<p>Get information about an existing configuration set, including the dedicated IP pool that it's associated with, whether or not it's enabled for sending email, and more.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>",
+            "title": "GetConfigurationSet",
+            "description": "Get information about an existing configuration set, including the dedicated IP\npool that it's associated with, whether or not it's enabled for sending email,\nand more.\n\nIn Amazon Pinpoint, configuration sets are groups of rules that you can apply to\nthe emails you send. You apply a configuration set to an email by including a\nreference to the configuration set in the headers of the email. When you apply a\nconfiguration set to an email, all of the rules in that configuration set are\napplied to the email.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -157,7 +157,7 @@
         },
         "PutConfigurationSetDeliveryOptions": {
             "main": "./lib/actions/PutConfigurationSetDeliveryOptions.js",
-            "title": "Associate a configuration set with a dedicated IP pool. You can use dedicated IP pools to create groups of dedicated IP addresses for sending specific types of email.",
+            "title": "PutConfigurationSetDeliveryOptions",
             "description": "Associate a configuration set with a dedicated IP pool. You can use dedicated IP pools to create groups of dedicated IP addresses for sending specific types of email.",
             "fields": {
                 "verbose": {
@@ -174,8 +174,8 @@
         },
         "GetConfigurationSetEventDestinations": {
             "main": "./lib/actions/GetConfigurationSetEventDestinations.js",
-            "title": "<p>Retrieve a list of event destinations that are associated with a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
-            "description": "<p>Retrieve a list of event destinations that are associated with a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
+            "title": "GetConfigurationSetEventDestinations",
+            "description": "Retrieve a list of event destinations that are associated with a configuration\nset.\n\nIn Amazon Pinpoint, events include message sends, deliveries, opens, clicks,\nbounces, and complaints. Event destinations are places that you can send\ninformation about these events to. For example, you can send event data to\nAmazon SNS to receive notifications when you receive bounces or complaints, or\nyou can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for\nlong-term storage.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -191,8 +191,8 @@
         },
         "CreateConfigurationSetEventDestination": {
             "main": "./lib/actions/CreateConfigurationSetEventDestination.js",
-            "title": "<p>Create an event destination. In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p> <p>A single configuration set can include more than one event destination.</p>",
-            "description": "<p>Create an event destination. In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p> <p>A single configuration set can include more than one event destination.</p>",
+            "title": "CreateConfigurationSetEventDestination",
+            "description": "Create an event destination. In Amazon Pinpoint, events include message sends,\ndeliveries, opens, clicks, bounces, and complaints. Event destinations are\nplaces that you can send information about these events to. For example, you can\nsend event data to Amazon SNS to receive notifications when you receive bounces\nor complaints, or you can use Amazon Kinesis Data Firehose to stream data to\nAmazon S3 for long-term storage.\n\nA single configuration set can include more than one event destination.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -208,8 +208,8 @@
         },
         "DeleteConfigurationSetEventDestination": {
             "main": "./lib/actions/DeleteConfigurationSetEventDestination.js",
-            "title": "<p>Delete an event destination.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
-            "description": "<p>Delete an event destination.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
+            "title": "DeleteConfigurationSetEventDestination",
+            "description": "Delete an event destination.\n\nIn Amazon Pinpoint, events include message sends, deliveries, opens, clicks,\nbounces, and complaints. Event destinations are places that you can send\ninformation about these events to. For example, you can send event data to\nAmazon SNS to receive notifications when you receive bounces or complaints, or\nyou can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for\nlong-term storage.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -225,8 +225,8 @@
         },
         "UpdateConfigurationSetEventDestination": {
             "main": "./lib/actions/UpdateConfigurationSetEventDestination.js",
-            "title": "<p>Update the configuration of an event destination for a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
-            "description": "<p>Update the configuration of an event destination for a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>",
+            "title": "UpdateConfigurationSetEventDestination",
+            "description": "Update the configuration of an event destination for a configuration set.\n\nIn Amazon Pinpoint, events include message sends, deliveries, opens, clicks,\nbounces, and complaints. Event destinations are places that you can send\ninformation about these events to. For example, you can send event data to\nAmazon SNS to receive notifications when you receive bounces or complaints, or\nyou can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for\nlong-term storage.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -242,7 +242,7 @@
         },
         "PutConfigurationSetReputationOptions": {
             "main": "./lib/actions/PutConfigurationSetReputationOptions.js",
-            "title": "Enable or disable collection of reputation metrics for emails that you send using a particular configuration set in a specific AWS Region.",
+            "title": "PutConfigurationSetReputationOptions",
             "description": "Enable or disable collection of reputation metrics for emails that you send using a particular configuration set in a specific AWS Region.",
             "fields": {
                 "verbose": {
@@ -259,7 +259,7 @@
         },
         "PutConfigurationSetSendingOptions": {
             "main": "./lib/actions/PutConfigurationSetSendingOptions.js",
-            "title": "Enable or disable email sending for messages that use a particular configuration set in a specific AWS Region.",
+            "title": "PutConfigurationSetSendingOptions",
             "description": "Enable or disable email sending for messages that use a particular configuration set in a specific AWS Region.",
             "fields": {
                 "verbose": {
@@ -276,7 +276,7 @@
         },
         "PutConfigurationSetTrackingOptions": {
             "main": "./lib/actions/PutConfigurationSetTrackingOptions.js",
-            "title": "Specify a custom domain to use for open and click tracking elements in email that you send using Amazon Pinpoint.",
+            "title": "PutConfigurationSetTrackingOptions",
             "description": "Specify a custom domain to use for open and click tracking elements in email that you send using Amazon Pinpoint.",
             "fields": {
                 "verbose": {
@@ -293,7 +293,7 @@
         },
         "ListDedicatedIpPools": {
             "main": "./lib/actions/ListDedicatedIpPools.js",
-            "title": "List all of the dedicated IP pools that exist in your Amazon Pinpoint account in the current AWS Region.",
+            "title": "ListDedicatedIpPools",
             "description": "List all of the dedicated IP pools that exist in your Amazon Pinpoint account in the current AWS Region.",
             "fields": {
                 "verbose": {
@@ -310,7 +310,7 @@
         },
         "CreateDedicatedIpPool": {
             "main": "./lib/actions/CreateDedicatedIpPool.js",
-            "title": "Create a new pool of dedicated IP addresses. A pool can include one or more dedicated IP addresses that are associated with your Amazon Pinpoint account. You can associate a pool with a configuration set. When you send an email that uses that configuration set, Amazon Pinpoint sends it using only the IP addresses in the associated pool.",
+            "title": "CreateDedicatedIpPool",
             "description": "Create a new pool of dedicated IP addresses. A pool can include one or more dedicated IP addresses that are associated with your Amazon Pinpoint account. You can associate a pool with a configuration set. When you send an email that uses that configuration set, Amazon Pinpoint sends it using only the IP addresses in the associated pool.",
             "fields": {
                 "verbose": {
@@ -327,7 +327,7 @@
         },
         "DeleteDedicatedIpPool": {
             "main": "./lib/actions/DeleteDedicatedIpPool.js",
-            "title": "Delete a dedicated IP pool.",
+            "title": "DeleteDedicatedIpPool",
             "description": "Delete a dedicated IP pool.",
             "fields": {
                 "verbose": {
@@ -344,7 +344,7 @@
         },
         "GetDedicatedIps": {
             "main": "./lib/actions/GetDedicatedIps.js",
-            "title": "List the dedicated IP addresses that are associated with your Amazon Pinpoint account.",
+            "title": "GetDedicatedIps",
             "description": "List the dedicated IP addresses that are associated with your Amazon Pinpoint account.",
             "fields": {
                 "verbose": {
@@ -361,7 +361,7 @@
         },
         "GetDedicatedIp": {
             "main": "./lib/actions/GetDedicatedIp.js",
-            "title": "Get information about a dedicated IP address, including the name of the dedicated IP pool that it's associated with, as well information about the automatic warm-up process for the address.",
+            "title": "GetDedicatedIp",
             "description": "Get information about a dedicated IP address, including the name of the dedicated IP pool that it's associated with, as well information about the automatic warm-up process for the address.",
             "fields": {
                 "verbose": {
@@ -378,8 +378,8 @@
         },
         "PutDedicatedIpInPool": {
             "main": "./lib/actions/PutDedicatedIpInPool.js",
-            "title": "<p>Move a dedicated IP address to an existing dedicated IP pool.</p> <note> <p>The dedicated IP address that you specify must already exist, and must be associated with your Amazon Pinpoint account. </p> <p>The dedicated IP pool you specify must already exist. You can create a new pool by using the <code>CreateDedicatedIpPool</code> operation.</p> </note>",
-            "description": "<p>Move a dedicated IP address to an existing dedicated IP pool.</p> <note> <p>The dedicated IP address that you specify must already exist, and must be associated with your Amazon Pinpoint account. </p> <p>The dedicated IP pool you specify must already exist. You can create a new pool by using the <code>CreateDedicatedIpPool</code> operation.</p> </note>",
+            "title": "PutDedicatedIpInPool",
+            "description": "Move a dedicated IP address to an existing dedicated IP pool.\n\nThe dedicated IP address that you specify must already exist, and must be\nassociated with your Amazon Pinpoint account. \n\nThe dedicated IP pool you specify must already exist. You can create a new pool\nby using the CreateDedicatedIpPool operation.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -395,8 +395,8 @@
         },
         "PutDedicatedIpWarmupAttributes": {
             "main": "./lib/actions/PutDedicatedIpWarmupAttributes.js",
-            "title": "<p/>",
-            "description": "<p/>",
+            "title": "PutDedicatedIpWarmupAttributes",
+            "description": "",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -412,8 +412,8 @@
         },
         "GetDeliverabilityDashboardOptions": {
             "main": "./lib/actions/GetDeliverabilityDashboardOptions.js",
-            "title": "<p>Show the status of the Deliverability dashboard. When the Deliverability dashboard is enabled, you gain access to reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement tests.</p> <p>When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month, AWS prorates the monthly charge based on how many days have elapsed in the current calendar month.</p>",
-            "description": "<p>Show the status of the Deliverability dashboard. When the Deliverability dashboard is enabled, you gain access to reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement tests.</p> <p>When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month, AWS prorates the monthly charge based on how many days have elapsed in the current calendar month.</p>",
+            "title": "GetDeliverabilityDashboardOptions",
+            "description": "Show the status of the Deliverability dashboard. When the Deliverability\ndashboard is enabled, you gain access to reputation metrics for the domains that\nyou use to send email using Amazon Pinpoint. You also gain the ability to\nperform predictive inbox placement tests.\n\nWhen you use the Deliverability dashboard, you pay a monthly charge of\nUSD$1,250.00, in addition to any other fees that you accrue by using Amazon\nPinpoint. If you enable the Deliverability dashboard after the first day of a\ncalendar month, AWS prorates the monthly charge based on how many days have\nelapsed in the current calendar month.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -429,8 +429,8 @@
         },
         "PutDeliverabilityDashboardOption": {
             "main": "./lib/actions/PutDeliverabilityDashboardOption.js",
-            "title": "<p>Enable or disable the Deliverability dashboard. When you enable the Deliverability dashboard, you gain access to reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement tests.</p> <p>When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month, we prorate the monthly charge based on how many days have elapsed in the current calendar month.</p>",
-            "description": "<p>Enable or disable the Deliverability dashboard. When you enable the Deliverability dashboard, you gain access to reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement tests.</p> <p>When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month, we prorate the monthly charge based on how many days have elapsed in the current calendar month.</p>",
+            "title": "PutDeliverabilityDashboardOption",
+            "description": "Enable or disable the Deliverability dashboard. When you enable the\nDeliverability dashboard, you gain access to reputation metrics for the domains\nthat you use to send email using Amazon Pinpoint. You also gain the ability to\nperform predictive inbox placement tests.\n\nWhen you use the Deliverability dashboard, you pay a monthly charge of\nUSD$1,250.00, in addition to any other fees that you accrue by using Amazon\nPinpoint. If you enable the Deliverability dashboard after the first day of a\ncalendar month, we prorate the monthly charge based on how many days have\nelapsed in the current calendar month.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -446,7 +446,7 @@
         },
         "GetBlacklistReports": {
             "main": "./lib/actions/GetBlacklistReports.js",
-            "title": "Retrieve a list of the blacklists that your dedicated IP addresses appear on.",
+            "title": "GetBlacklistReports",
             "description": "Retrieve a list of the blacklists that your dedicated IP addresses appear on.",
             "fields": {
                 "verbose": {
@@ -463,7 +463,7 @@
         },
         "GetDomainStatisticsReport": {
             "main": "./lib/actions/GetDomainStatisticsReport.js",
-            "title": "Retrieve inbox placement and engagement rates for the domains that you use to send email.",
+            "title": "GetDomainStatisticsReport",
             "description": "Retrieve inbox placement and engagement rates for the domains that you use to send email.",
             "fields": {
                 "verbose": {
@@ -480,7 +480,7 @@
         },
         "CreateDeliverabilityTestReport": {
             "main": "./lib/actions/CreateDeliverabilityTestReport.js",
-            "title": "Create a new predictive inbox placement test. Predictive inbox placement tests can help you predict how your messages will be handled by various email providers around the world. When you perform a predictive inbox placement test, you provide a sample message that contains the content that you plan to send to your customers. Amazon Pinpoint then sends that message to special email addresses spread across several major email providers. After about 24 hours, the test is complete, and you can use the <code>GetDeliverabilityTestReport</code> operation to view the results of the test.",
+            "title": "CreateDeliverabilityTestReport",
             "description": "Create a new predictive inbox placement test. Predictive inbox placement tests can help you predict how your messages will be handled by various email providers around the world. When you perform a predictive inbox placement test, you provide a sample message that contains the content that you plan to send to your customers. Amazon Pinpoint then sends that message to special email addresses spread across several major email providers. After about 24 hours, the test is complete, and you can use the <code>GetDeliverabilityTestReport</code> operation to view the results of the test.",
             "fields": {
                 "verbose": {
@@ -497,7 +497,7 @@
         },
         "ListDeliverabilityTestReports": {
             "main": "./lib/actions/ListDeliverabilityTestReports.js",
-            "title": "Show a list of the predictive inbox placement tests that you've performed, regardless of their statuses. For predictive inbox placement tests that are complete, you can use the <code>GetDeliverabilityTestReport</code> operation to view the results.",
+            "title": "ListDeliverabilityTestReports",
             "description": "Show a list of the predictive inbox placement tests that you've performed, regardless of their statuses. For predictive inbox placement tests that are complete, you can use the <code>GetDeliverabilityTestReport</code> operation to view the results.",
             "fields": {
                 "verbose": {
@@ -514,7 +514,7 @@
         },
         "GetDeliverabilityTestReport": {
             "main": "./lib/actions/GetDeliverabilityTestReport.js",
-            "title": "Retrieve the results of a predictive inbox placement test.",
+            "title": "GetDeliverabilityTestReport",
             "description": "Retrieve the results of a predictive inbox placement test.",
             "fields": {
                 "verbose": {
@@ -531,7 +531,7 @@
         },
         "ListEmailIdentities": {
             "main": "./lib/actions/ListEmailIdentities.js",
-            "title": "Returns a list of all of the email identities that are associated with your Amazon Pinpoint account. An identity can be either an email address or a domain. This operation returns identities that are verified as well as those that aren't.",
+            "title": "ListEmailIdentities",
             "description": "Returns a list of all of the email identities that are associated with your Amazon Pinpoint account. An identity can be either an email address or a domain. This operation returns identities that are verified as well as those that aren't.",
             "fields": {
                 "verbose": {
@@ -548,8 +548,8 @@
         },
         "CreateEmailIdentity": {
             "main": "./lib/actions/CreateEmailIdentity.js",
-            "title": "<p>Verifies an email identity for use with Amazon Pinpoint. In Amazon Pinpoint, an identity is an email address or domain that you use when you send email. Before you can use an identity to send email with Amazon Pinpoint, you first have to verify it. By verifying an address, you demonstrate that you're the owner of the address, and that you've given Amazon Pinpoint permission to send email from the address.</p> <p>When you verify an email address, Amazon Pinpoint sends an email to the address. Your email address is verified as soon as you follow the link in the verification email. </p> <p>When you verify a domain, this operation provides a set of DKIM tokens, which you can convert into CNAME tokens. You add these CNAME tokens to the DNS configuration for your domain. Your domain is verified when Amazon Pinpoint detects these records in the DNS configuration for your domain. It usually takes around 72 hours to complete the domain verification process.</p>",
-            "description": "<p>Verifies an email identity for use with Amazon Pinpoint. In Amazon Pinpoint, an identity is an email address or domain that you use when you send email. Before you can use an identity to send email with Amazon Pinpoint, you first have to verify it. By verifying an address, you demonstrate that you're the owner of the address, and that you've given Amazon Pinpoint permission to send email from the address.</p> <p>When you verify an email address, Amazon Pinpoint sends an email to the address. Your email address is verified as soon as you follow the link in the verification email. </p> <p>When you verify a domain, this operation provides a set of DKIM tokens, which you can convert into CNAME tokens. You add these CNAME tokens to the DNS configuration for your domain. Your domain is verified when Amazon Pinpoint detects these records in the DNS configuration for your domain. It usually takes around 72 hours to complete the domain verification process.</p>",
+            "title": "CreateEmailIdentity",
+            "description": "Verifies an email identity for use with Amazon Pinpoint. In Amazon Pinpoint, an\nidentity is an email address or domain that you use when you send email. Before\nyou can use an identity to send email with Amazon Pinpoint, you first have to\nverify it. By verifying an address, you demonstrate that you're the owner of the\naddress, and that you've given Amazon Pinpoint permission to send email from the\naddress.\n\nWhen you verify an email address, Amazon Pinpoint sends an email to the address.\nYour email address is verified as soon as you follow the link in the\nverification email. \n\nWhen you verify a domain, this operation provides a set of DKIM tokens, which\nyou can convert into CNAME tokens. You add these CNAME tokens to the DNS\nconfiguration for your domain. Your domain is verified when Amazon Pinpoint\ndetects these records in the DNS configuration for your domain. It usually takes\naround 72 hours to complete the domain verification process.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -565,7 +565,7 @@
         },
         "DeleteEmailIdentity": {
             "main": "./lib/actions/DeleteEmailIdentity.js",
-            "title": "Deletes an email identity that you previously verified for use with Amazon Pinpoint. An identity can be either an email address or a domain name.",
+            "title": "DeleteEmailIdentity",
             "description": "Deletes an email identity that you previously verified for use with Amazon Pinpoint. An identity can be either an email address or a domain name.",
             "fields": {
                 "verbose": {
@@ -582,7 +582,7 @@
         },
         "GetEmailIdentity": {
             "main": "./lib/actions/GetEmailIdentity.js",
-            "title": "Provides information about a specific identity associated with your Amazon Pinpoint account, including the identity's verification status, its DKIM authentication status, and its custom Mail-From settings.",
+            "title": "GetEmailIdentity",
             "description": "Provides information about a specific identity associated with your Amazon Pinpoint account, including the identity's verification status, its DKIM authentication status, and its custom Mail-From settings.",
             "fields": {
                 "verbose": {
@@ -599,7 +599,7 @@
         },
         "PutEmailIdentityDkimAttributes": {
             "main": "./lib/actions/PutEmailIdentityDkimAttributes.js",
-            "title": "Used to enable or disable DKIM authentication for an email identity.",
+            "title": "PutEmailIdentityDkimAttributes",
             "description": "Used to enable or disable DKIM authentication for an email identity.",
             "fields": {
                 "verbose": {
@@ -616,8 +616,8 @@
         },
         "PutEmailIdentityFeedbackAttributes": {
             "main": "./lib/actions/PutEmailIdentityFeedbackAttributes.js",
-            "title": "<p>Used to enable or disable feedback forwarding for an identity. This setting determines what happens when an identity is used to send an email that results in a bounce or complaint event.</p> <p>When you enable feedback forwarding, Amazon Pinpoint sends you email notifications when bounce or complaint events occur. Amazon Pinpoint sends this notification to the address that you specified in the Return-Path header of the original email.</p> <p>When you disable feedback forwarding, Amazon Pinpoint sends notifications through other mechanisms, such as by notifying an Amazon SNS topic. You're required to have a method of tracking bounces and complaints. If you haven't set up another mechanism for receiving bounce or complaint notifications, Amazon Pinpoint sends an email notification when these events occur (even if this setting is disabled).</p>",
-            "description": "<p>Used to enable or disable feedback forwarding for an identity. This setting determines what happens when an identity is used to send an email that results in a bounce or complaint event.</p> <p>When you enable feedback forwarding, Amazon Pinpoint sends you email notifications when bounce or complaint events occur. Amazon Pinpoint sends this notification to the address that you specified in the Return-Path header of the original email.</p> <p>When you disable feedback forwarding, Amazon Pinpoint sends notifications through other mechanisms, such as by notifying an Amazon SNS topic. You're required to have a method of tracking bounces and complaints. If you haven't set up another mechanism for receiving bounce or complaint notifications, Amazon Pinpoint sends an email notification when these events occur (even if this setting is disabled).</p>",
+            "title": "PutEmailIdentityFeedbackAttributes",
+            "description": "Used to enable or disable feedback forwarding for an identity. This setting\ndetermines what happens when an identity is used to send an email that results\nin a bounce or complaint event.\n\nWhen you enable feedback forwarding, Amazon Pinpoint sends you email\nnotifications when bounce or complaint events occur. Amazon Pinpoint sends this\nnotification to the address that you specified in the Return-Path header of the\noriginal email.\n\nWhen you disable feedback forwarding, Amazon Pinpoint sends notifications\nthrough other mechanisms, such as by notifying an Amazon SNS topic. You're\nrequired to have a method of tracking bounces and complaints. If you haven't set\nup another mechanism for receiving bounce or complaint notifications, Amazon\nPinpoint sends an email notification when these events occur (even if this\nsetting is disabled).",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -633,7 +633,7 @@
         },
         "PutEmailIdentityMailFromAttributes": {
             "main": "./lib/actions/PutEmailIdentityMailFromAttributes.js",
-            "title": "Used to enable or disable the custom Mail-From domain configuration for an email identity.",
+            "title": "PutEmailIdentityMailFromAttributes",
             "description": "Used to enable or disable the custom Mail-From domain configuration for an email identity.",
             "fields": {
                 "verbose": {
@@ -650,8 +650,8 @@
         },
         "SendEmail": {
             "main": "./lib/actions/SendEmail.js",
-            "title": "<p>Sends an email message. You can use the Amazon Pinpoint Email API to send two types of messages:</p> <ul> <li> <p> <b>Simple</b> - A standard email message. When you create this type of message, you specify the sender, the recipient, and the message body, and Amazon Pinpoint assembles the message for you.</p> </li> <li> <p> <b>Raw</b> - A raw, MIME-formatted email message. When you send this type of email, you have to specify all of the message headers, as well as the message body. You can use this message type to send messages that contain attachments. The message that you specify has to be a valid MIME message.</p> </li> </ul>",
-            "description": "<p>Sends an email message. You can use the Amazon Pinpoint Email API to send two types of messages:</p> <ul> <li> <p> <b>Simple</b> - A standard email message. When you create this type of message, you specify the sender, the recipient, and the message body, and Amazon Pinpoint assembles the message for you.</p> </li> <li> <p> <b>Raw</b> - A raw, MIME-formatted email message. When you send this type of email, you have to specify all of the message headers, as well as the message body. You can use this message type to send messages that contain attachments. The message that you specify has to be a valid MIME message.</p> </li> </ul>",
+            "title": "SendEmail",
+            "description": "Sends an email message. You can use the Amazon Pinpoint Email API to send two\ntypes of messages:\n\n *   Simple - A standard email message. When you create this type of message, you\n   specify the sender, the recipient, and the message body, and Amazon Pinpoint\n   assembles the message for you.\n   \n   \n *   Raw - A raw, MIME-formatted email message. When you send this type of email,\n   you have to specify all of the message headers, as well as the message body.\n   You can use this message type to send messages that contain attachments. The\n   message that you specify has to be a valid MIME message.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
